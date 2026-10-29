@@ -1,0 +1,78 @@
+/* Document-level styles injected on youtube.com. The panel itself lives in a shadow root;
+   @font-face has to be declared here because Chrome ignores it inside shadow roots. */
+
+@font-face {
+  font-family: 'YTS Plex Condensed';
+  font-weight: 400;
+  font-display: swap;
+  src: url('chrome-extension://__MSG_@@extension_id__/fonts/plex-cond-400.woff2') format('woff2');
+}
+@font-face {
+  font-family: 'YTS Plex Condensed';
+  font-weight: 500;
+  font-display: swap;
+  src: url('chrome-extension://__MSG_@@extension_id__/fonts/plex-cond-500.woff2') format('woff2');
+}
+@font-face {
+  font-family: 'YTS Plex Condensed';
+  font-weight: 600;
+  font-display: swap;
+  src: url('chrome-extension://__MSG_@@extension_id__/fonts/plex-cond-600.woff2') format('woff2');
+}
+@font-face {
+  font-family: 'YTS Plex Mono';
+  font-weight: 400;
+  font-display: swap;
+  src: url('chrome-extension://__MSG_@@extension_id__/fonts/plex-mono-400.woff2') format('woff2');
+}
+@font-face {
+  font-family: 'YTS Plex Mono';
+  font-weight: 500;
+  font-display: swap;
+  src: url('chrome-extension://__MSG_@@extension_id__/fonts/plex-mono-500.woff2') format('woff2');
+}
+
+/* The speaker key in the watch-page player bar. YouTube's .ytp-button gives it the 48 x 40 slot. */
+.yts-sonos-button {
+  display: inline-flex !important;
+  align-items: center;
+  justify-content: center;
+  vertical-align: top;
+}
+.yts-sonos-button svg {
+  width: 24px !important;
+  height: 24px !important;
+  display: block;
+}
+.yts-sonos-button[aria-expanded='true'] .yts-lamp {
+  fill: #f05a24;
+}
+
+/* Shorts: sits with the menu and full screen keys in the top-right cluster. */
+.yts-sonos-button.yts-shorts {
+  width: 48px;
+  height: 48px;
+  padding: 0;
+  margin: 0;
+  border: 0;
+  border-radius: 50%;
+  background: transparent;
+  color: #fff;
+  cursor: pointer;
+  /* The Shorts control cluster has pointer-events: none and re-enables it per button. */
+  pointer-events: auto;
+}
+.yts-sonos-button.yts-shorts:hover {
+  background: rgba(255, 255, 255, 0.1);
+}
+
+.yts-panel-host {
+  position: absolute;
+  z-index: 2147483000;
+  right: 12px;
+  bottom: 68px;
+}
+.yts-panel-host.yts-shorts {
+  top: 76px;
+  bottom: auto;
+}

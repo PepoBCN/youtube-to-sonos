@@ -1,0 +1,8 @@
+# Personal working notes, not for the public repo
+PICKUP.md
+SPEC.md
+
+node_modules/
+*.log
+.DS_Store
+extension/tests/screenshots/

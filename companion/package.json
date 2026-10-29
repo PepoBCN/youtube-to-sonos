@@ -1,0 +1,13 @@
+{
+  "name": "youtube-to-sonos-companion",
+  "version": "1.0.0",
+  "private": true,
+  "type": "module",
+  "description": "Local companion server that plays YouTube audio on Sonos speakers",
+  "main": "server.js",
+  "engines": { "node": ">=24" },
+  "scripts": {
+    "start": "node server.js",
+    "test": "node --test test/*.test.js"
+  }
+}
